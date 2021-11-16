@@ -1,11 +1,11 @@
 import React from 'react';
 import { AppRouter } from './routers/AppRouter'
-import './styles/main.css'
+import './styles/board.css'
 
 function App() {
-  return (
-       <AppRouter />
-      );
+    return ( <
+        AppRouter / >
+    );
 }
 
 export default App;

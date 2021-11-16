@@ -1,30 +1,27 @@
 import React from 'react';
-import { Link, NavLink, useHistory } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 
 export const Navbar = () => {
-
-
-
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-            
-
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
-
-                    <NavLink 
-                        activeClassName="active"
-                        className="nav-item nav-link" 
-                        exact
-                        to="/"
-                    >
-                        Main menu
+        <div className="container mt-2">
+           <ul className="nav nav-pills">
+                <li className="nav-item">
+                    <NavLink exact to="/" className="nav-link">
+                        Main menu 
                     </NavLink>
-
-                  
-                </div>
-            </div>
-        </nav>
+                </li>
+                <li className="nav-item">
+                    <NavLink exact to="/history" className="nav-link">
+                        Game history
+                    </NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink  exact to="/game" className="nav-link  disabled">
+                        Game
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
     )
 }

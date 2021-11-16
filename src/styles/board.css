@@ -1,7 +1,26 @@
+html,
+body {
+    display: flex;
+    justify-content: center;
+}
+
 #board {
     display: flex;
     justify-content: center;
     border-radius: 2px;
+}
+
+.background {
+    background-color: white;
+    border: solid 5px rgba(185, 185, 185, 0.8);
+    border-radius: 1.1rem;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .cell {
@@ -27,12 +46,21 @@
     background-color: #756f80;
 }
 
+.extreme {
+    background-color: darkred!important;
+    cursor: default;
+}
+
 .flag {
     background-color: #9c97a5;
 }
 
-.none {
-    background-color: darkgray!important;
+.flag:hover {
+    background-color: #cec8d8;
+}
+
+.high {
+    background-color: indianred!important;
     cursor: default;
 }
 
@@ -51,16 +79,12 @@
     cursor: default;
 }
 
-.high {
-    background-color: indianred!important;
+.none {
+    background-color: darkgray!important;
     cursor: default;
 }
 
-.extreme {
-    background-color: darkred!important;
-    cursor: default;
-}
-
-.flag:hover {
-    background-color: #cec8d8;
+.row {
+    height: 30px;
+    display: flex;
 }
