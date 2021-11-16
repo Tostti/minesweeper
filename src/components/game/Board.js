@@ -128,6 +128,9 @@ const Board = ({ timerActive, dif, srows, scols, smines, load, setLoad, setLeftM
     const handleClick = (clickedcell) => {
         //Check if the cell wasn't previously clicked, has a flag or the game hasn't ended
         if (!clickedcell.classList.contains('flag') && !clickedcell.classList.contains('clicked') && !clickedcell.classList.contains('lose')) {
+            if (!timerActive) {
+                setTimerActive(true); //It starts the timer if this is the first click of the game
+            }
             let pos = clickedcell.id; //The ID of every rendered cell is it's position in the format "x,y"
             const x = parseInt(pos.split(',')[0]);
             const y = parseInt(pos.split(',')[1]);
