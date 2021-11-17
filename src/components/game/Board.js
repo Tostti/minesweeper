@@ -42,6 +42,11 @@ const Board = ({ timerActive, dif, srows, scols, smines, load, setLoad, setLeftM
 
     //It adds the flags,clicks and other things from the loaded values
     const loadGameData = () => {
+        //Set the global variables rows, cols and mines to the loaded values again because the update have a little 
+        //delay in the assignment and some times it don't update when this function starts
+        rows = saveData.rows;
+        cols = saveData.cols;
+        mines = saveData.mines;
         let loadflag = saveData.flagcode;
         let loadclicked = saveData.clickedcode;
         for (let row = 0; row < rows; row++) {

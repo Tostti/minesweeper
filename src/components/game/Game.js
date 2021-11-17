@@ -30,7 +30,6 @@ const Game = (props) => {
 
     //It starts the timer when timerActive state is true and stops it if it's false
     useEffect(() => {
-        console.log(props);
         if (timerActive) {
             timerInterval.current = setInterval(() => {
                 addTime();
